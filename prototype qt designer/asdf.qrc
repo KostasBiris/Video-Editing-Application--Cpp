@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>newpfp.jpg</file>
+        <file>newpfp3.jpg</file>
+    </qresource>
+</RCC>
