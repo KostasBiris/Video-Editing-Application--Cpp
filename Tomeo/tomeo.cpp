@@ -27,6 +27,7 @@
 #include <QtCore/QDirIterator>
 #include "the_player.h"
 #include "the_button.h"
+#include "mainwindow.h"
 
 
 using namespace std;
@@ -145,8 +146,13 @@ int main(int argc, char *argv[]) {
     top->addWidget(buttonWidget);
 
     // showtime!
-    window.show();
+    //window.show();
+
+    MainWindow w;
+    w.addTomeo(window);
+    w.show();
 
     // wait for the app to terminate
     return app.exec();
+
 }
