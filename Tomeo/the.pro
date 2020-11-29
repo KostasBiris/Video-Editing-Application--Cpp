@@ -11,12 +11,14 @@ SOURCES += \
         mainwindow.cpp \
         the_button.cpp \
         the_player.cpp \
-        tomeo.cpp
+        tomeo.cpp \
+        vidlayout.cpp
 
 HEADERS += \
     mainwindow.h \
     the_button.h \
-    the_player.h
+    the_player.h \
+    vidlayout.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

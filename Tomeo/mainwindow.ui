@@ -2,19 +2,40 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1189</width>
-    <height>651</height>
+    <width>1192</width>
+    <height>722</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>4</number>
+    </property>
+    <property name="leftMargin">
+     <number>4</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>4</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
     <item>
      <layout class="QVBoxLayout" name="verticalLayout"/>
     </item>
@@ -24,7 +45,7 @@
        <enum>Qt::Horizontal</enum>
       </property>
       <property name="sizeType">
-       <enum>QSizePolicy::MinimumExpanding</enum>
+       <enum>QSizePolicy::Expanding</enum>
       </property>
       <property name="sizeHint" stdset="0">
        <size>
@@ -83,8 +104,8 @@
         </property>
         <property name="minimumSize">
          <size>
-          <width>120</width>
-          <height>80</height>
+          <width>140</width>
+          <height>100</height>
          </size>
         </property>
         <property name="text">
@@ -102,8 +123,8 @@
         </property>
         <property name="minimumSize">
          <size>
-          <width>120</width>
-          <height>80</height>
+          <width>140</width>
+          <height>100</height>
          </size>
         </property>
         <property name="text">
@@ -121,8 +142,8 @@
         </property>
         <property name="minimumSize">
          <size>
-          <width>120</width>
-          <height>80</height>
+          <width>140</width>
+          <height>100</height>
          </size>
         </property>
         <property name="text">
@@ -140,8 +161,8 @@
         </property>
         <property name="minimumSize">
          <size>
-          <width>120</width>
-          <height>80</height>
+          <width>140</width>
+          <height>100</height>
          </size>
         </property>
         <property name="text">
@@ -168,6 +189,19 @@
         </property>
        </widget>
       </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
      </layout>
     </item>
    </layout>
@@ -177,9 +211,12 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1189</width>
+     <width>1192</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>false</bool>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>

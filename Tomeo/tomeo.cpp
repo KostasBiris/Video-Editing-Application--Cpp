@@ -28,6 +28,8 @@
 #include "the_player.h"
 #include "the_button.h"
 #include "mainwindow.h"
+#include "vidlayout.h"
+#include "ui_settings.h"
 
 
 using namespace std;
@@ -136,18 +138,24 @@ int main(int argc, char *argv[]) {
 
     // create the main window and layout
     QWidget window;
-    QVBoxLayout *top = new QVBoxLayout();
-    window.setLayout(top);
+    VidLayout *vids = new VidLayout(10);
+    window.setLayout(vids);
     window.setWindowTitle("tomeo");
-    window.setMinimumSize(1280, 720);
+    window.setMinimumSize(640, 360);
 
-    // add the video and the buttons to the top level widget
-    top->addWidget(videoWidget);
-    top->addWidget(buttonWidget);
+    // add the video and the buttons
+    vids->addWidget(videoWidget);
+    vids->addWidget(buttonWidget);
+
+    //add the video settings at the bottom
+    Ui::Settings q;
+    QWidget* settings = new QWidget();
+    q.setupUi(settings);
+    vids->addWidget(settings);
+
+
 
     // showtime!
-    //window.show();
-
     MainWindow w;
     w.addTomeo(window);
     w.show();

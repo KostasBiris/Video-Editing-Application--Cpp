@@ -7,14 +7,14 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    statusBar()->hide();
+    menuBar()->hide();
 }
 
 void MainWindow::addTomeo(QWidget &tomeo){
     ui->verticalLayout->addWidget(&tomeo);
-    Ui::Settings q;
-    QWidget *foo = new QWidget;
-    q.setupUi(foo);
-    ui->verticalLayout->addWidget(foo);
+
+
 }
 
 MainWindow::~MainWindow()
