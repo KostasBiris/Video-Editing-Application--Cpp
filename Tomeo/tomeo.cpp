@@ -29,7 +29,9 @@
 #include "the_button.h"
 #include "mainwindow.h"
 #include "vidlayout.h"
+#include "video_settings.h"
 #include "ui_settings.h"
+#include "thumblayout.h"
 
 
 using namespace std;
@@ -121,7 +123,12 @@ int main(int argc, char *argv[]) {
     vector<TheButton*> buttons;
     // the buttons are arranged horizontally
     QHBoxLayout *layout = new QHBoxLayout();
-    buttonWidget->setLayout(layout);
+    //buttonWidget->setLayout(layout);
+
+
+    ///layout for the 4 buttons
+    ThumbLayout *thumbs = new ThumbLayout(5);
+    buttonWidget->setLayout(thumbs);
 
 
     // create the four buttons
@@ -129,7 +136,8 @@ int main(int argc, char *argv[]) {
         TheButton *button = new TheButton(buttonWidget);
         button->connect(button, SIGNAL(jumpTo(TheButtonInfo* )), player, SLOT (jumpTo(TheButtonInfo* ))); // when clicked, tell the player to play.
         buttons.push_back(button);
-        layout->addWidget(button);
+        //layout->addWidget(button);
+        thumbs->addWidget(button);
         button->init(&videos.at(i));
     }
 
@@ -148,13 +156,16 @@ int main(int argc, char *argv[]) {
     vids->addWidget(buttonWidget);
 
     //add the video settings at the bottom
-    Ui::Settings q;
+    /*Ui::Settings q;
     QWidget* settings = new QWidget();
-    q.setupUi(settings);
+    q.setupUi(settings);*/
+
+    //I made a class for the settings.ui but it gives weird errors so that's it for now
+    //VideoSettings q;
+
+    //idk if this fixes it, there might be some bugs along the way
+    QWidget* settings = new VideoSettings();
     vids->addWidget(settings);
-
-
-
     // showtime!
     MainWindow w;
     w.addTomeo(window);

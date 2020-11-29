@@ -1,19 +1,18 @@
-#ifndef VIDLAYOUT_H
-#define VIDLAYOUT_H
+#ifndef THUMBNAILLAYOUT_H
+#define THUMBNAILLAYOUT_H
 
 
 #include <QtWidgets>
 #include <QVector>
 
-
-class VidLayout : public QLayout
+class ThumbLayout : public QLayout
 {
 public:
-    VidLayout(int spacing): QLayout()
+    ThumbLayout(int spacing): QLayout()
     { setSpacing(spacing); }
-    VidLayout(int spacing, QWidget *parent): QLayout(parent)
+    ThumbLayout(int spacing, QWidget *parent): QLayout(parent)
     { setSpacing(spacing); }
-    ~VidLayout();
+    ~ThumbLayout();
 
     void addItem(QLayoutItem *item) override;
     QSize sizeHint() const override;
@@ -27,4 +26,4 @@ private:
     QVector<QLayoutItem*> m_items;
 };
 
-#endif // VIDLAYOUT_H
+#endif // THUMBNAILLAYOUT_H

@@ -11,13 +11,17 @@ SOURCES += \
         mainwindow.cpp \
         the_button.cpp \
         the_player.cpp \
+        thumblayout.cpp \
         tomeo.cpp \
+        video_settings.cpp \
         vidlayout.cpp
 
 HEADERS += \
     mainwindow.h \
     the_button.h \
     the_player.h \
+    thumblayout.h \
+    video_settings.h \
     vidlayout.h
 
 # Default rules for deployment.
