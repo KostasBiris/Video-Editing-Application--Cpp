@@ -40,12 +40,13 @@ void ThumbLayout::setGeometry(const QRect &r)
     if (m_items.size() == 0)
         return;
 
-    int w = (r.width() - (m_items.count() - 1) * spacing())/4;
+    int w = (r.width() - (m_items.count() - 1) * spacing())/5;
+    int kw = 195;
     int h = r.height();
     int i = 0;
     while (i < m_items.size()) {
         QLayoutItem *o = m_items.at(i);
-        QRect geom(r.x() + i *(w+spacing()), r.y(), w, h);
+        QRect geom(r.x() + i *(w+spacing()), r.y(), kw, h);
         o->setGeometry(geom);
         ++i;
     }
