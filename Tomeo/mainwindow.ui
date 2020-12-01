@@ -109,7 +109,7 @@
          </size>
         </property>
         <property name="text">
-         <string>PushButton</string>
+         <string>Add Videos</string>
         </property>
        </widget>
       </item>
@@ -128,7 +128,7 @@
          </size>
         </property>
         <property name="text">
-         <string>PushButton</string>
+         <string>Edit</string>
         </property>
        </widget>
       </item>
@@ -147,7 +147,7 @@
          </size>
         </property>
         <property name="text">
-         <string>PushButton</string>
+         <string>Options</string>
         </property>
        </widget>
       </item>
@@ -166,26 +166,7 @@
          </size>
         </property>
         <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_7">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>120</width>
-          <height>80</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>Options</string>
+         <string>Stream</string>
         </property>
        </widget>
       </item>
@@ -212,7 +193,7 @@
      <x>0</x>
      <y>0</y>
      <width>1192</width>
-     <height>20</height>
+     <height>24</height>
     </rect>
    </property>
    <property name="nativeMenuBar">

@@ -1,0 +1,12 @@
+debug/mainwindow.o
+debug/the_button.o
+debug/the_player.o
+debug/thumbnails_layout.o
+debug/tomeo.o
+debug/video_settings.o
+debug/vidlayout.o
+debug/qrc_material_design.o
+debug/moc_mainwindow.o
+debug/moc_the_button.o
+debug/moc_the_player.o
+debug/moc_video_settings.o
