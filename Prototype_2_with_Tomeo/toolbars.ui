@@ -37,9 +37,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>46</red>
-        <green>46</green>
-        <blue>46</blue>
+        <red>18</red>
+        <green>18</green>
+        <blue>18</blue>
        </color>
       </brush>
      </colorrole>
@@ -109,18 +109,18 @@
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>46</red>
-        <green>46</green>
-        <blue>46</blue>
+        <red>18</red>
+        <green>18</green>
+        <blue>18</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>46</red>
-        <green>46</green>
-        <blue>46</blue>
+        <red>18</red>
+        <green>18</green>
+        <blue>18</blue>
        </color>
       </brush>
      </colorrole>
@@ -183,9 +183,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>46</red>
-        <green>46</green>
-        <blue>46</blue>
+        <red>18</red>
+        <green>18</green>
+        <blue>18</blue>
        </color>
       </brush>
      </colorrole>
@@ -255,18 +255,18 @@
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>46</red>
-        <green>46</green>
-        <blue>46</blue>
+        <red>18</red>
+        <green>18</green>
+        <blue>18</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>46</red>
-        <green>46</green>
-        <blue>46</blue>
+        <red>18</red>
+        <green>18</green>
+        <blue>18</blue>
        </color>
       </brush>
      </colorrole>
@@ -329,9 +329,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>46</red>
-        <green>46</green>
-        <blue>46</blue>
+        <red>18</red>
+        <green>18</green>
+        <blue>18</blue>
        </color>
       </brush>
      </colorrole>
@@ -401,18 +401,18 @@
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>46</red>
-        <green>46</green>
-        <blue>46</blue>
+        <red>18</red>
+        <green>18</green>
+        <blue>18</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>46</red>
-        <green>46</green>
-        <blue>46</blue>
+        <red>18</red>
+        <green>18</green>
+        <blue>18</blue>
        </color>
       </brush>
      </colorrole>
@@ -468,7 +468,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(46, 46, 46);</string>
+   <string notr="true">background-color:rgb(18, 18, 18);</string>
   </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
@@ -490,9 +490,15 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-	background-color : rgb(32, 34, 37);
-	border-color:rgb(118, 118, 118);
-	border-width: 1px
+ background-color: rgb(98, 0, 238);
+ border-style: solid;
+ border-width:1px;
+ border-radius:19px;
+ border-color: rgb(98, 0, 238);
+ max-width:38px;
+ max-height:38px;
+ min-width:38px;
+ min-height:38px;
 }</string>
    </property>
    <property name="text">
@@ -529,7 +535,15 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-	background-color : rgb(32, 34, 37);
+ background-color: rgb(98, 0, 238);
+ border-style: solid;
+ border-width:1px;
+ border-radius:19px;
+ border-color: rgb(98, 0, 238);
+ max-width:38px;
+ max-height:38px;
+ min-width:38px;
+ min-height:38px;
 }</string>
    </property>
    <property name="text">
@@ -569,11 +583,23 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-	background-color : rgb(32, 34, 37);
+ background-color: rgb(98, 0, 238);
+ border-style: solid;
+ border-width:1px;
+ border-radius:19px;
+ border-color: rgb(98, 0, 238);
+ max-width:38px;
+ max-height:38px;
+ min-width:38px;
+ min-height:38px;
 }</string>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="material_design.qrc">
+     <normaloff>:/new/prefix1/resources/video_library-24px.svg</normaloff>:/new/prefix1/resources/video_library-24px.svg</iconset>
    </property>
   </widget>
   <widget class="QSlider" name="horizontalSlider">
@@ -589,7 +615,7 @@
     <cursorShape>ClosedHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">QSlider::handle:horizontal {background-color: green;}
+    <string notr="true">QSlider::handle:horizontal {background-color: rgb(3, 218, 198);}
 </string>
    </property>
    <property name="orientation">

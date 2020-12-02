@@ -487,7 +487,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QWidget {
-	background-color:rgb(46, 46, 46);
+	background-color:rgb(18, 18, 18);
 	border-color: white;
 }</string>
    </property>
@@ -549,31 +549,25 @@
       </property>
       <item>
        <widget class="QLabel" name="label">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
         <property name="minimumSize">
          <size>
           <width>120</width>
           <height>80</height>
          </size>
         </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
         <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/E:/Pictures/newpfp3.jpg&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_4">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
         <property name="minimumSize">
          <size>
           <width>140</width>
@@ -595,9 +589,9 @@
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -622,18 +616,18 @@
            <colorrole role="Base">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -660,9 +654,9 @@
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -687,18 +681,18 @@
            <colorrole role="Base">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -725,9 +719,9 @@
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -752,18 +746,18 @@
            <colorrole role="Base">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -792,8 +786,11 @@
         </property>
         <property name="styleSheet">
          <string notr="true">QPushButton{
-	background-color: rgb(32, 34, 37);
+	background-color:rgb(18, 18, 18);
 	color: white;
+	border-style: outset;
+	border-width: 0.5px;
+    border-color: rgb(82, 87, 90);
 }</string>
         </property>
         <property name="locale">
@@ -804,14 +801,30 @@
         </property>
         <property name="icon">
          <iconset resource="material_design.qrc">
-          <normaloff>:/new/prefix1/resources/add_circle-24px.svg</normaloff>:/new/prefix1/resources/add_circle-24px.svg</iconset>
+          <normaloff>:/new/prefix1/resources/add_circle_outline-white-24dp.svg</normaloff>:/new/prefix1/resources/add_circle_outline-white-24dp.svg</iconset>
         </property>
        </widget>
       </item>
       <item>
+       <spacer name="verticalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>2</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
        <widget class="QPushButton" name="pushButton_2">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
@@ -837,9 +850,9 @@
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -864,18 +877,18 @@
            <colorrole role="Base">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -902,9 +915,9 @@
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -929,18 +942,18 @@
            <colorrole role="Base">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -967,9 +980,9 @@
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -994,18 +1007,18 @@
            <colorrole role="Base">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -1034,10 +1047,12 @@
         </property>
         <property name="styleSheet">
          <string notr="true">QPushButton{
-	background-color: rgb(32, 34, 37);
+	background-color:rgb(18, 18, 18);
 	color: white;
-}
-</string>
+	border-style: outset;
+	border-width: 0.5px;
+    border-color: rgb(82, 87, 90);
+}</string>
         </property>
         <property name="locale">
          <locale language="English" country="UnitedKingdom"/>
@@ -1047,9 +1062,25 @@
         </property>
         <property name="icon">
          <iconset resource="material_design.qrc">
-          <normaloff>:/new/prefix1/resources/create-24px.svg</normaloff>:/new/prefix1/resources/create-24px.svg</iconset>
+          <normaloff>:/new/prefix1/resources/edit-white-24dp.svg</normaloff>:/new/prefix1/resources/edit-white-24dp.svg</iconset>
         </property>
        </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>2</height>
+         </size>
+        </property>
+       </spacer>
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_5">
@@ -1065,6 +1096,12 @@
           <height>100</height>
          </size>
         </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>100</height>
+         </size>
+        </property>
         <property name="palette">
          <palette>
           <active>
@@ -1080,9 +1117,9 @@
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -1107,18 +1144,18 @@
            <colorrole role="Base">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -1145,9 +1182,9 @@
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -1172,18 +1209,18 @@
            <colorrole role="Base">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -1210,9 +1247,9 @@
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -1237,18 +1274,18 @@
            <colorrole role="Base">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -1277,8 +1314,11 @@
         </property>
         <property name="styleSheet">
          <string notr="true">QPushButton{
-	background-color: rgb(32, 34, 37);
+	background-color:rgb(18, 18, 18);
 	color: white;
+	border-style: outset;
+	border-width: 0.5px;
+    border-color: rgb(82, 87, 90);
 }</string>
         </property>
         <property name="locale">
@@ -1289,9 +1329,25 @@
         </property>
         <property name="icon">
          <iconset resource="material_design.qrc">
-          <normaloff>:/new/prefix1/resources/settings-24px.svg</normaloff>:/new/prefix1/resources/settings-24px.svg</iconset>
+          <normaloff>:/new/prefix1/resources/settings-white-24dp.svg</normaloff>:/new/prefix1/resources/settings-white-24dp.svg</iconset>
         </property>
        </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>2</height>
+         </size>
+        </property>
+       </spacer>
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_3">
@@ -1322,9 +1378,9 @@
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -1349,18 +1405,18 @@
            <colorrole role="Base">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -1387,9 +1443,9 @@
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -1414,18 +1470,18 @@
            <colorrole role="Base">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -1452,9 +1508,9 @@
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -1479,18 +1535,18 @@
            <colorrole role="Base">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>32</red>
-              <green>34</green>
-              <blue>37</blue>
+              <red>18</red>
+              <green>18</green>
+              <blue>18</blue>
              </color>
             </brush>
            </colorrole>
@@ -1522,8 +1578,11 @@
         </property>
         <property name="styleSheet">
          <string notr="true">QPushButton{
-	background-color: rgb(32, 34, 37);
+	background-color:rgb(18, 18, 18);
 	color: white;
+	border-style: outset;
+	border-width: 0.5px;
+    border-color: rgb(82, 87, 90);
 }</string>
         </property>
         <property name="locale">
@@ -1534,7 +1593,7 @@
         </property>
         <property name="icon">
          <iconset resource="material_design.qrc">
-          <normaloff>:/new/prefix1/resources/live_tv-24px.svg</normaloff>:/new/prefix1/resources/live_tv-24px.svg</iconset>
+          <normaloff>:/new/prefix1/resources/live_tv-white-24dp.svg</normaloff>:/new/prefix1/resources/live_tv-white-24dp.svg</iconset>
         </property>
        </widget>
       </item>
@@ -1561,7 +1620,7 @@
      <x>0</x>
      <y>0</y>
      <width>1192</width>
-     <height>24</height>
+     <height>22</height>
     </rect>
    </property>
    <property name="nativeMenuBar">

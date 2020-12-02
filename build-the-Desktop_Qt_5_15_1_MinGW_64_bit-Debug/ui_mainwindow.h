@@ -35,8 +35,11 @@ public:
     QVBoxLayout *verticalLayout_2;
     QLabel *label;
     QPushButton *pushButton_4;
+    QSpacerItem *verticalSpacer_3;
     QPushButton *pushButton_2;
+    QSpacerItem *verticalSpacer_2;
     QPushButton *pushButton_5;
+    QSpacerItem *verticalSpacer_4;
     QPushButton *pushButton_3;
     QSpacerItem *verticalSpacer;
     QMenuBar *menubar;
@@ -135,7 +138,7 @@ public:
         centralwidget->setMinimumSize(QSize(800, 0));
         centralwidget->setAutoFillBackground(false);
         centralwidget->setStyleSheet(QString::fromUtf8("QWidget {\n"
-"	background-color:rgb(46, 46, 46);\n"
+"	background-color:rgb(18, 18, 18);\n"
 "	border-color: white;\n"
 "}"));
         horizontalLayout = new QHBoxLayout(centralwidget);
@@ -158,23 +161,20 @@ public:
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
-        label->setSizePolicy(sizePolicy);
         label->setMinimumSize(QSize(120, 80));
+        QFont font1;
+        font1.setBold(false);
+        font1.setWeight(50);
+        label->setFont(font1);
 
         verticalLayout_2->addWidget(label);
 
         pushButton_4 = new QPushButton(centralwidget);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        sizePolicy.setHeightForWidth(pushButton_4->sizePolicy().hasHeightForWidth());
-        pushButton_4->setSizePolicy(sizePolicy);
         pushButton_4->setMinimumSize(QSize(140, 100));
         QPalette palette1;
         palette1.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        QBrush brush10(QColor(32, 34, 37, 255));
+        QBrush brush10(QColor(18, 18, 18, 255));
         brush10.setStyle(Qt::SolidPattern);
         palette1.setBrush(QPalette::Active, QPalette::Button, brush10);
         palette1.setBrush(QPalette::Active, QPalette::Text, brush);
@@ -209,26 +209,36 @@ public:
         palette1.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush13);
 #endif
         pushButton_4->setPalette(palette1);
-        QFont font1;
-        font1.setFamily(QString::fromUtf8("Arial"));
-        font1.setPointSize(10);
-        font1.setBold(true);
-        font1.setWeight(75);
-        pushButton_4->setFont(font1);
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("Arial"));
+        font2.setPointSize(10);
+        font2.setBold(true);
+        font2.setWeight(75);
+        pushButton_4->setFont(font2);
         pushButton_4->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton_4->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"	background-color: rgb(32, 34, 37);\n"
+"	background-color:rgb(18, 18, 18);\n"
 "	color: white;\n"
+"	border-style: outset;\n"
+"	border-width: 0.5px;\n"
+"    border-color: rgb(82, 87, 90);\n"
 "}"));
         pushButton_4->setLocale(QLocale(QLocale::English, QLocale::UnitedKingdom));
         QIcon icon;
-        icon.addFile(QString::fromUtf8(":/new/prefix1/resources/add_circle-24px.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8(":/new/prefix1/resources/add_circle_outline-white-24dp.svg"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_4->setIcon(icon);
 
         verticalLayout_2->addWidget(pushButton_4);
 
+        verticalSpacer_3 = new QSpacerItem(20, 2, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_2->addItem(verticalSpacer_3);
+
         pushButton_2 = new QPushButton(centralwidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        QSizePolicy sizePolicy(QSizePolicy::Maximum, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
         pushButton_2->setSizePolicy(sizePolicy);
         pushButton_2->setMinimumSize(QSize(140, 100));
@@ -267,24 +277,35 @@ public:
         palette2.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush16);
 #endif
         pushButton_2->setPalette(palette2);
-        pushButton_2->setFont(font1);
+        pushButton_2->setFont(font2);
         pushButton_2->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"	background-color: rgb(32, 34, 37);\n"
+"	background-color:rgb(18, 18, 18);\n"
 "	color: white;\n"
+"	border-style: outset;\n"
+"	border-width: 0.5px;\n"
+"    border-color: rgb(82, 87, 90);\n"
 "}"));
         pushButton_2->setLocale(QLocale(QLocale::English, QLocale::UnitedKingdom));
         QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/new/prefix1/resources/create-24px.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        icon1.addFile(QString::fromUtf8(":/new/prefix1/resources/edit-white-24dp.svg"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_2->setIcon(icon1);
 
         verticalLayout_2->addWidget(pushButton_2);
 
+        verticalSpacer_2 = new QSpacerItem(20, 2, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_2->addItem(verticalSpacer_2);
+
         pushButton_5 = new QPushButton(centralwidget);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        sizePolicy.setHeightForWidth(pushButton_5->sizePolicy().hasHeightForWidth());
-        pushButton_5->setSizePolicy(sizePolicy);
+        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(pushButton_5->sizePolicy().hasHeightForWidth());
+        pushButton_5->setSizePolicy(sizePolicy1);
         pushButton_5->setMinimumSize(QSize(140, 100));
+        pushButton_5->setMaximumSize(QSize(16777215, 100));
         QPalette palette3;
         palette3.setBrush(QPalette::Active, QPalette::WindowText, brush);
         palette3.setBrush(QPalette::Active, QPalette::Button, brush10);
@@ -320,23 +341,30 @@ public:
         palette3.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush19);
 #endif
         pushButton_5->setPalette(palette3);
-        pushButton_5->setFont(font1);
+        pushButton_5->setFont(font2);
         pushButton_5->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton_5->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"	background-color: rgb(32, 34, 37);\n"
+"	background-color:rgb(18, 18, 18);\n"
 "	color: white;\n"
+"	border-style: outset;\n"
+"	border-width: 0.5px;\n"
+"    border-color: rgb(82, 87, 90);\n"
 "}"));
         pushButton_5->setLocale(QLocale(QLocale::English, QLocale::UnitedKingdom));
         QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/new/prefix1/resources/settings-24px.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        icon2.addFile(QString::fromUtf8(":/new/prefix1/resources/settings-white-24dp.svg"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_5->setIcon(icon2);
 
         verticalLayout_2->addWidget(pushButton_5);
 
+        verticalSpacer_4 = new QSpacerItem(20, 2, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_2->addItem(verticalSpacer_4);
+
         pushButton_3 = new QPushButton(centralwidget);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        sizePolicy.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
-        pushButton_3->setSizePolicy(sizePolicy);
+        sizePolicy1.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
+        pushButton_3->setSizePolicy(sizePolicy1);
         pushButton_3->setMinimumSize(QSize(140, 100));
         QPalette palette4;
         palette4.setBrush(QPalette::Active, QPalette::WindowText, brush);
@@ -373,23 +401,26 @@ public:
         palette4.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush22);
 #endif
         pushButton_3->setPalette(palette4);
-        QFont font2;
-        font2.setFamily(QString::fromUtf8("Arial"));
-        font2.setPointSize(10);
-        font2.setBold(true);
-        font2.setItalic(false);
-        font2.setUnderline(false);
-        font2.setWeight(75);
-        font2.setStrikeOut(false);
-        pushButton_3->setFont(font2);
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("Arial"));
+        font3.setPointSize(10);
+        font3.setBold(true);
+        font3.setItalic(false);
+        font3.setUnderline(false);
+        font3.setWeight(75);
+        font3.setStrikeOut(false);
+        pushButton_3->setFont(font3);
         pushButton_3->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton_3->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"	background-color: rgb(32, 34, 37);\n"
+"	background-color:rgb(18, 18, 18);\n"
 "	color: white;\n"
+"	border-style: outset;\n"
+"	border-width: 0.5px;\n"
+"    border-color: rgb(82, 87, 90);\n"
 "}"));
         pushButton_3->setLocale(QLocale(QLocale::English, QLocale::UnitedKingdom));
         QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/new/prefix1/resources/live_tv-24px.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        icon3.addFile(QString::fromUtf8(":/new/prefix1/resources/live_tv-white-24dp.svg"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_3->setIcon(icon3);
 
         verticalLayout_2->addWidget(pushButton_3);
@@ -404,7 +435,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1192, 24));
+        menubar->setGeometry(QRect(0, 0, 1192, 22));
         menubar->setNativeMenuBar(false);
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
@@ -419,7 +450,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><img src=\":/E:/Pictures/newpfp3.jpg\"/></p></body></html>", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><br/></p></body></html>", nullptr));
         pushButton_4->setText(QCoreApplication::translate("MainWindow", "Add Videos", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         pushButton_5->setText(QCoreApplication::translate("MainWindow", "Settings", nullptr));

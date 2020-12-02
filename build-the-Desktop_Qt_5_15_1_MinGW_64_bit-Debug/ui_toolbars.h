@@ -41,7 +41,7 @@ public:
         QBrush brush(QColor(255, 255, 255, 255));
         brush.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        QBrush brush1(QColor(46, 46, 46, 255));
+        QBrush brush1(QColor(18, 18, 18, 255));
         brush1.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::Button, brush1);
         QBrush brush2(QColor(81, 85, 94, 255));
@@ -113,16 +113,22 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush8);
 #endif
         Settings->setPalette(palette);
-        Settings->setStyleSheet(QString::fromUtf8("background-color:rgb(46, 46, 46);"));
+        Settings->setStyleSheet(QString::fromUtf8("background-color:rgb(18, 18, 18);"));
         pushButton = new QPushButton(Settings);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(0, 0, 40, 40));
         pushButton->setMinimumSize(QSize(40, 40));
         pushButton->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color : rgb(32, 34, 37);\n"
-"	border-color:rgb(118, 118, 118);\n"
-"	border-width: 1px\n"
+" background-color: rgb(98, 0, 238);\n"
+" border-style: solid;\n"
+" border-width:1px;\n"
+" border-radius:19px;\n"
+" border-color: rgb(98, 0, 238);\n"
+" max-width:38px;\n"
+" max-height:38px;\n"
+" min-width:38px;\n"
+" min-height:38px;\n"
 "}"));
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/new/prefix1/resources/play_arrow-24px.svg"), QSize(), QIcon::Normal, QIcon::Off);
@@ -135,7 +141,15 @@ public:
         pushButton_2->setMinimumSize(QSize(40, 40));
         pushButton_2->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color : rgb(32, 34, 37);\n"
+" background-color: rgb(98, 0, 238);\n"
+" border-style: solid;\n"
+" border-width:1px;\n"
+" border-radius:19px;\n"
+" border-color: rgb(98, 0, 238);\n"
+" max-width:38px;\n"
+" max-height:38px;\n"
+" min-width:38px;\n"
+" min-height:38px;\n"
 "}"));
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/new/prefix1/resources/pause_circle_filled-24px.svg"), QSize(), QIcon::Normal, QIcon::Off);
@@ -149,13 +163,24 @@ public:
         pushButton_3->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton_3->setAutoFillBackground(false);
         pushButton_3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color : rgb(32, 34, 37);\n"
+" background-color: rgb(98, 0, 238);\n"
+" border-style: solid;\n"
+" border-width:1px;\n"
+" border-radius:19px;\n"
+" border-color: rgb(98, 0, 238);\n"
+" max-width:38px;\n"
+" max-height:38px;\n"
+" min-width:38px;\n"
+" min-height:38px;\n"
 "}"));
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/new/prefix1/resources/video_library-24px.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_3->setIcon(icon2);
         horizontalSlider = new QSlider(Settings);
         horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
         horizontalSlider->setGeometry(QRect(150, 10, 111, 16));
         horizontalSlider->setCursor(QCursor(Qt::ClosedHandCursor));
-        horizontalSlider->setStyleSheet(QString::fromUtf8("QSlider::handle:horizontal {background-color: green;}\n"
+        horizontalSlider->setStyleSheet(QString::fromUtf8("QSlider::handle:horizontal {background-color: rgb(3, 218, 198);}\n"
 ""));
         horizontalSlider->setOrientation(Qt::Horizontal);
 
@@ -169,7 +194,7 @@ public:
         Settings->setWindowTitle(QCoreApplication::translate("Settings", "Form", nullptr));
         pushButton->setText(QString());
         pushButton_2->setText(QString());
-        pushButton_3->setText(QCoreApplication::translate("Settings", "PushButton", nullptr));
+        pushButton_3->setText(QString());
     } // retranslateUi
 
 };

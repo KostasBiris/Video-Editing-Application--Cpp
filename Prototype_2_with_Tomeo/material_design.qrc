@@ -6,5 +6,11 @@
         <file>resources/pause_circle_filled-24px.svg</file>
         <file>resources/play_arrow-24px.svg</file>
         <file>resources/settings-24px.svg</file>
+        <file>resources/video_library-24px.svg</file>
+        <file>resources/add_circle_outline-white-24dp.svg</file>
+        <file>resources/edit-white-24dp.svg</file>
+        <file>resources/live_tv-white-24dp.svg</file>
+        <file>resources/settings-white-24dp.svg</file>
+        <file>resources/mylogo.svg</file>
     </qresource>
 </RCC>

@@ -131,14 +131,14 @@ int main(int argc, char *argv[]) {
     buttonWidget->setLayout(thumbs);
 
 
-    // create many buttons
-    for ( int i = 1; i < 9; i++ ) {
+    // create buttons that dynamically update as the videos in the library increase
+    for ( int i = 1; i < (int)videos.size(); i++ ) {
         TheButton *button = new TheButton(buttonWidget);
         button->connect(button, SIGNAL(jumpTo(TheButtonInfo* )), player, SLOT (jumpTo(TheButtonInfo* ))); // when clicked, tell the player to play.
         buttons.push_back(button);
         //layout->addWidget(button);
         thumbs->addWidget(button);
-        button->init(&videos.at(rand()%4)); ///original i = 4, there are only 4 indexed videos, fix later
+        button->init(&videos.at(i)); ///original i = 4, there are only 4 indexed videos, fix later //Upadate: fixed
     }
 
     // tell the player what buttons and videos are available
