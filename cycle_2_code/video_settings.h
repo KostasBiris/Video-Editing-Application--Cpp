@@ -19,18 +19,25 @@ public:
     int volume() const;
     void onVolumeSliderValueChanged();
     void onPositionSliderValueChanged(int position);
+    void updateDurationInfo(int info);
     ~VideoSettings();
 
 signals:
      void changeVolume(int volume);
      void setPosition(int position);
+     void changeMuting(bool muting);
+     void next();
 
 private slots:
      void positionChanged(qint64 position);
      void durationChanged(qint64 duration);
+     void muteClicked();
+     void setMuted(bool muted);
 
 private:
     Ui::Settings  *ui;
+    bool videoMuted = false;
+    int vid_duration;
 };
 
 #endif // VIDEO_SETTINGS_H

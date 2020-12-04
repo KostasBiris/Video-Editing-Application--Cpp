@@ -1,6 +1,8 @@
 #include "video_settings.h"
 #include "ui_toolbars.h"
 #include "QSlider"
+#include "QTime"
+#include "QVideoWidget"
 
 VideoSettings::VideoSettings(QWidget *parent)
     : QWidget(parent)
@@ -18,7 +20,10 @@ void VideoSettings::makePlayerConnections(ThePlayer* player){
     connect(ui->horizontalSlider, &QSlider::valueChanged, this,
             &VideoSettings::onVolumeSliderValueChanged);
     connect(this, &VideoSettings::changeVolume, player, &QMediaPlayer::setVolume);
-
+    //mute
+    connect(ui->mutebutton, &QAbstractButton::clicked, this, &VideoSettings::muteClicked);
+    connect(this, &VideoSettings::changeMuting, player, &QMediaPlayer::setMuted);
+    connect(player, &QMediaPlayer::mutedChanged, this, &VideoSettings::setMuted);
     //video time
     ui->horizontalSlider_2->setRange(0,0);
 
@@ -28,6 +33,9 @@ void VideoSettings::makePlayerConnections(ThePlayer* player){
 
     connect(player, &QMediaPlayer::positionChanged, this, &VideoSettings::positionChanged);
     connect(player, &QMediaPlayer::durationChanged, this, &VideoSettings::durationChanged);
+
+    //fullscreen
+
 
 }
 
@@ -50,14 +58,47 @@ void VideoSettings::onPositionSliderValueChanged(int position)
 }
 
 
+void VideoSettings::muteClicked()
+{
+    emit changeMuting(!videoMuted);
+}
+
+void VideoSettings::setMuted(bool muted){
+
+    if (muted != videoMuted)
+        videoMuted = muted;
+}
+
 void VideoSettings::positionChanged(qint64 position)
 {
     ui->horizontalSlider_2->setValue(position);
+
+    updateDurationInfo(position/1000);
 }
+
+
+
+void VideoSettings::updateDurationInfo(int info)
+{
+    QString time;
+    if (info || vid_duration) {
+        QTime currentTime((info / 3600) % 60, (info / 60) % 60,
+            info % 60, info % 1000);
+        QTime totalTime((vid_duration / 3600) % 60, (vid_duration / 60) % 60,
+            vid_duration % 60, (vid_duration * 1000) % 1000);
+        QString format = "mm:ss";
+        if (vid_duration > 3600)
+            format = "hh:mm:ss";
+        time = currentTime.toString(format) + " / " + totalTime.toString(format);
+    }
+    ui->label->setText(time);
+}
+
 
 void VideoSettings::durationChanged(qint64 duration)
 {
     ui->horizontalSlider_2->setRange(0, duration);
+    vid_duration = duration/1000;
 }
 
 VideoSettings::~VideoSettings()
