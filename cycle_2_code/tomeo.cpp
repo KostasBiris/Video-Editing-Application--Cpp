@@ -76,6 +76,7 @@ vector<TheButtonInfo> getInfoIn (string loc) {
 }
 
 
+
 int main(int argc, char *argv[]) {
 
     // let's just check that Qt is operational first
@@ -115,6 +116,7 @@ int main(int argc, char *argv[]) {
 
     // the QMediaPlayer which controls the playback
     ThePlayer *player = new ThePlayer;
+    player->setPlaylist(&videos);
     player->setVideoOutput(videoWidget);
 
     // a row of buttons

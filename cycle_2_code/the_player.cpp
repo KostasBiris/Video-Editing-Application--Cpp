@@ -16,7 +16,7 @@ void ThePlayer::setContent(std::vector<TheButton*>* b, std::vector<TheButtonInfo
 // change the image and video for one button every one second
 void ThePlayer::shuffle() {
     TheButtonInfo* i = & infos -> at (rand() % infos->size() );
-//        setMedia(*i->url);
+//       setMedia(*i->url);
     buttons -> at( updateCount++ % buttons->size() ) -> init( i );
 }
 
@@ -33,5 +33,30 @@ void ThePlayer::playStateChanged (QMediaPlayer::State ms) {
 void ThePlayer::jumpTo (TheButtonInfo* button) {
     setMedia( * button -> url);
     play();
+}
+
+void ThePlayer::setPlaylist(vector<TheButtonInfo> * info){
+
+    if(playlist != nullptr)
+        delete playlist;
+
+    playlist = new QMediaPlaylist();
+    for(auto i : *info){
+        playlist->addMedia(*i.url);
+    }
+    playlist->setCurrentIndex(0);
+    playlist->setPlaybackMode(QMediaPlaylist::Loop);
+
+}
+
+void ThePlayer::nextMedia(){
+     playlist->next();
+     setMedia( playlist->currentMedia());
+}
+
+
+void ThePlayer::prevMedia(){
+     playlist->previous();
+     setMedia( playlist->currentMedia());
 }
 

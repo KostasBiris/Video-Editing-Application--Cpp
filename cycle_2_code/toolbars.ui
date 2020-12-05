@@ -761,6 +761,70 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
+  <widget class="QPushButton" name="forwardButton">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>0</y>
+     <width>40</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+ background-color: rgb(98, 0, 238);
+ border-style: solid;
+ border-width:1px;
+ border-radius:19px;
+ border-color: rgb(98, 0, 238);
+ max-width:38px;
+ max-height:38px;
+ min-width:38px;
+ min-height:38px;
+}</string>
+   </property>
+   <property name="text">
+    <string>NEXT</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="prevButton">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>0</y>
+     <width>40</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+ background-color: rgb(98, 0, 238);
+ border-style: solid;
+ border-width:1px;
+ border-radius:19px;
+ border-color: rgb(98, 0, 238);
+ max-width:38px;
+ max-height:38px;
+ min-width:38px;
+ min-height:38px;
+}</string>
+   </property>
+   <property name="text">
+    <string>PREV</string>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="material_design.qrc"/>

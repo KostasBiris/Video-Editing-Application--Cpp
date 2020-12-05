@@ -15,7 +15,7 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>940</width>
+    <width>950</width>
     <height>0</height>
    </size>
   </property>
@@ -567,7 +567,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="addVideos">
         <property name="minimumSize">
          <size>
           <width>140</width>
@@ -1620,7 +1620,7 @@
      <x>0</x>
      <y>0</y>
      <width>1192</width>
-     <height>22</height>
+     <height>20</height>
     </rect>
    </property>
    <property name="nativeMenuBar">

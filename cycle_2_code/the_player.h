@@ -11,6 +11,7 @@
 #include "the_button.h"
 #include <vector>
 #include <QTimer>
+#include <QMediaPlaylist>
 
 using namespace std;
 
@@ -22,6 +23,7 @@ private:
     vector<TheButtonInfo>* infos;
     vector<TheButton*>* buttons;
     QTimer* mTimer;
+    QMediaPlaylist* playlist = nullptr;
     long updateCount = 0;
 
 public:
@@ -37,6 +39,8 @@ public:
 
     // all buttons have been setup, store pointers here
     void setContent(vector<TheButton*>* b, vector<TheButtonInfo>* i);
+    void setPlaylist(vector<TheButtonInfo> * info);
+
 
 private slots:
 
@@ -50,6 +54,8 @@ public slots:
 
     // start playing this ButtonInfo
     void jumpTo (TheButtonInfo* button);
+    void nextMedia();
+    void prevMedia();
 
 };
 

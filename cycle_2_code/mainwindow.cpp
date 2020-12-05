@@ -13,6 +13,8 @@ MainWindow::MainWindow(QWidget *parent)
 void MainWindow::addTomeo(QWidget &tomeo){
     ui->verticalLayout->addWidget(&tomeo);
 
+    //connect(ui->addVideos)
+
 
 }
 

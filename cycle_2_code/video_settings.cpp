@@ -34,6 +34,11 @@ void VideoSettings::makePlayerConnections(ThePlayer* player){
     connect(player, &QMediaPlayer::positionChanged, this, &VideoSettings::positionChanged);
     connect(player, &QMediaPlayer::durationChanged, this, &VideoSettings::durationChanged);
 
+    //next
+    connect(ui->forwardButton, &QAbstractButton::released, player, &ThePlayer::nextMedia);
+    //previous
+    connect(ui->prevButton, &QAbstractButton::released, player, &ThePlayer::prevMedia);
+
     //fullscreen
 
 
