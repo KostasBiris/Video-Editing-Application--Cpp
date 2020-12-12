@@ -173,6 +173,7 @@ int main(int argc, char *argv[]) {
     vids->addWidget(settings);
     // showtime!
     MainWindow w;
+    //w.makePlayerConnections(player);
     w.addTomeo(window);
     w.show();
 

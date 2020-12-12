@@ -19,6 +19,8 @@ void MainWindow::addTomeo(QWidget &tomeo){
 }
 
 void MainWindow::makePlayerConnections(ThePlayer* player){
+    //change folder
+   // connect(ui->addVideos, &QAbstractButton::clicked, player, &ThePlayer::nextMedia);
 
 }
 

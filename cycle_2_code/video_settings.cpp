@@ -13,8 +13,13 @@ VideoSettings::VideoSettings(QWidget *parent)
 
 void VideoSettings::makePlayerConnections(ThePlayer* player){
 
+    //hide overlapping button
+    ui->pushButton->hide();
+    //play pause
     connect(ui->pushButton_2,SIGNAL(clicked()),player,SLOT(pause()));
     connect(ui->pushButton,SIGNAL(clicked()),player,SLOT(play()));
+    connect(ui->pushButton_2,&QAbstractButton::clicked, this, &VideoSettings::playPauseClicked );
+    connect(ui->pushButton,&QAbstractButton::clicked, this, &VideoSettings::playPauseClicked );
 
     //volumes
     connect(ui->horizontalSlider, &QSlider::valueChanged, this,
@@ -44,6 +49,23 @@ void VideoSettings::makePlayerConnections(ThePlayer* player){
 
 }
 
+void VideoSettings::playPauseClicked()
+{
+    if ( playing == true){
+        playing = false;
+        ui->pushButton_2->hide();
+        ui->pushButton->show();
+    }
+    else
+    {
+        playing = true;
+        ui->pushButton_2->show();
+        ui->pushButton->hide();
+    }
+}
+
+
+
 int VideoSettings::volume() const
 {
     qreal linearVolume =  QAudio::convertVolume(ui->horizontalSlider->value() / qreal(100),
@@ -72,6 +94,11 @@ void VideoSettings::setMuted(bool muted){
 
     if (muted != videoMuted)
         videoMuted = muted;
+
+    if (videoMuted == true)
+        ui->mutebutton->setIcon(QIcon(":/new/prefix1/resources/volume_up-24px.svg"));
+    else
+        ui->mutebutton->setIcon(QIcon(":/new/prefix1/resources/volume_off-24px.svg"));
 }
 
 void VideoSettings::positionChanged(qint64 position)

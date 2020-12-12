@@ -12,5 +12,7 @@
         <file>resources/live_tv-white-24dp.svg</file>
         <file>resources/settings-white-24dp.svg</file>
         <file>resources/mylogo.svg</file>
+        <file>resources/volume_off-24px.svg</file>
+        <file>resources/volume_up-24px.svg</file>
     </qresource>
 </RCC>

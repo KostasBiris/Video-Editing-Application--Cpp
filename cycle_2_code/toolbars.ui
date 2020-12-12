@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>40</height>
+    <height>45</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -473,7 +473,7 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>10</x>
      <y>0</y>
      <width>40</width>
      <height>40</height>
@@ -512,7 +512,7 @@
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>10</x>
      <y>0</y>
      <width>40</width>
      <height>40</height>
@@ -557,7 +557,7 @@
   <widget class="QPushButton" name="pushButton_3">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>540</x>
      <y>0</y>
      <width>40</width>
      <height>40</height>
@@ -605,7 +605,7 @@
   <widget class="QSlider" name="horizontalSlider">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>60</x>
      <y>10</y>
      <width>111</width>
      <height>16</height>
@@ -625,7 +625,7 @@
   <widget class="QSlider" name="horizontalSlider_2">
    <property name="geometry">
     <rect>
-     <x>370</x>
+     <x>280</x>
      <y>10</y>
      <width>240</width>
      <height>16</height>
@@ -657,7 +657,7 @@
   <widget class="QPushButton" name="mutebutton">
    <property name="geometry">
     <rect>
-     <x>320</x>
+     <x>230</x>
      <y>0</y>
      <width>40</width>
      <height>40</height>
@@ -675,6 +675,9 @@
      <height>40</height>
     </size>
    </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/new/prefix1/resources/volume_off-24px.svg&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
  background-color: rgb(98, 0, 238);
@@ -689,13 +692,17 @@
 }</string>
    </property>
    <property name="text">
-    <string>MUTE</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="material_design.qrc">
+     <normaloff>:/new/prefix1/resources/volume_off-24px.svg</normaloff>:/new/prefix1/resources/volume_off-24px.svg</iconset>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>620</x>
+     <x>590</x>
      <y>10</y>
      <width>81</width>
      <height>20</height>
@@ -724,7 +731,7 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>180</x>
      <y>0</y>
      <width>40</width>
      <height>40</height>
@@ -764,7 +771,7 @@
   <widget class="QPushButton" name="forwardButton">
    <property name="geometry">
     <rect>
-     <x>750</x>
+     <x>720</x>
      <y>0</y>
      <width>40</width>
      <height>40</height>
@@ -796,7 +803,7 @@
   <widget class="QPushButton" name="prevButton">
    <property name="geometry">
     <rect>
-     <x>710</x>
+     <x>680</x>
      <y>0</y>
      <width>40</width>
      <height>40</height>
