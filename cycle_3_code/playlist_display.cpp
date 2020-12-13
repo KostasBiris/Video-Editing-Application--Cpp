@@ -4,6 +4,12 @@
 PlaylistDisplay::PlaylistDisplay()
     : QListWidget()
 {
+    this->setStyleSheet(  "background-color:rgb(18, 18, 18);;"
+                             "border-style: solid;"
+                             "border-width:1px;"
+                            "border-color: white;"
+                          "color: white"
+                            );
 }
 
 PlaylistDisplay::~PlaylistDisplay()
