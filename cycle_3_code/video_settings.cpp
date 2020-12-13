@@ -103,7 +103,7 @@ void VideoSettings::setMuted(bool muted){
     if (muted != videoMuted)
         videoMuted = muted;
 
-    if (videoMuted != true)
+    if (videoMuted == true)
         ui->mutebutton->setIcon(QIcon(":/new/prefix1/resources/volume_off-24px.svg"));
     else
         ui->mutebutton->setIcon(QIcon(":/new/prefix1/resources/volume_up-24px.svg"));
