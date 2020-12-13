@@ -38,7 +38,7 @@ private slots:
 
 private:
     Ui::Settings  *ui;
-    bool videoMuted = true;
+    bool videoMuted = false;
     bool playing = true;
     int vid_duration;
 };
