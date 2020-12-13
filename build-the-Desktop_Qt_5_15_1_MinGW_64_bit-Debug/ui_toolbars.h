@@ -157,6 +157,11 @@ public:
 " max-height:38px;\n"
 " min-width:38px;\n"
 " min-height:38px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color:rgb(114, 26, 239);\n"
+"	color: white;\n"
+"	background-repeat: no-repeat;\n"
 "}"));
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/new/prefix1/resources/pause_circle_filled-24px.svg"), QSize(), QIcon::Normal, QIcon::Off);
@@ -179,6 +184,11 @@ public:
 " max-height:38px;\n"
 " min-width:38px;\n"
 " min-height:38px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color:rgb(114, 26, 239);\n"
+"	color: white;\n"
+"	background-repeat: no-repeat;\n"
 "}"));
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/new/prefix1/resources/video_library-24px.svg"), QSize(), QIcon::Normal, QIcon::Off);
@@ -217,6 +227,11 @@ public:
 " max-height:38px;\n"
 " min-width:38px;\n"
 " min-height:38px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color:rgb(114, 26, 239);\n"
+"	color: white;\n"
+"	background-repeat: no-repeat;\n"
 "}"));
         QIcon icon3;
         icon3.addFile(QString::fromUtf8(":/new/prefix1/resources/volume_off-24px.svg"), QSize(), QIcon::Normal, QIcon::Off);
@@ -226,6 +241,10 @@ public:
         label->setGeometry(QRect(590, 10, 81, 20));
         sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
         label->setSizePolicy(sizePolicy);
+        QFont font;
+        font.setFamily(QString::fromUtf8("Arial"));
+        font.setPointSize(8);
+        label->setFont(font);
         label->setStyleSheet(QString::fromUtf8("QLabel {\n"
 " background-color: rgb(98, 0, 238);\n"
 " border-style: solid;\n"
@@ -239,9 +258,10 @@ public:
         label_2->setGeometry(QRect(180, 0, 40, 40));
         sizePolicy.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
         label_2->setSizePolicy(sizePolicy);
-        QFont font;
-        font.setPointSize(11);
-        label_2->setFont(font);
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Arial"));
+        font1.setPointSize(11);
+        label_2->setFont(font1);
         label_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
 " background-color: rgb(98, 0, 238);\n"
 " border-style: solid;\n"
@@ -252,6 +272,11 @@ public:
 " max-height:38px;\n"
 " min-width:38px;\n"
 " min-height:38px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color:rgb(114, 26, 239);\n"
+"	color: white;\n"
+"	background-repeat: no-repeat;\n"
 "}"));
         label_2->setAlignment(Qt::AlignCenter);
         forwardButton = new QPushButton(Settings);
@@ -268,7 +293,15 @@ public:
 " max-height:38px;\n"
 " min-width:38px;\n"
 " min-height:38px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color:rgb(114, 26, 239);\n"
+"	color: white;\n"
+"	background-repeat: no-repeat;\n"
 "}"));
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/new/prefix1/resources/skip_next-24px.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        forwardButton->setIcon(icon4);
         prevButton = new QPushButton(Settings);
         prevButton->setObjectName(QString::fromUtf8("prevButton"));
         prevButton->setGeometry(QRect(680, 0, 40, 40));
@@ -283,7 +316,15 @@ public:
 " max-height:38px;\n"
 " min-width:38px;\n"
 " min-height:38px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color:rgb(114, 26, 239);\n"
+"	color: white;\n"
+"	background-repeat: no-repeat;\n"
 "}"));
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/new/prefix1/resources/skip_previous-24px.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        prevButton->setIcon(icon5);
 
         retranslateUi(Settings);
         QObject::connect(horizontalSlider, SIGNAL(valueChanged(int)), label_2, SLOT(setNum(int)));
@@ -303,8 +344,8 @@ public:
         mutebutton->setText(QString());
         label->setText(QCoreApplication::translate("Settings", "00:00/00:00", nullptr));
         label_2->setText(QCoreApplication::translate("Settings", "0", nullptr));
-        forwardButton->setText(QCoreApplication::translate("Settings", "NEXT", nullptr));
-        prevButton->setText(QCoreApplication::translate("Settings", "PREV", nullptr));
+        forwardButton->setText(QString());
+        prevButton->setText(QString());
     } // retranslateUi
 
 };

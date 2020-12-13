@@ -139,6 +139,8 @@ release/qrc_material_design.cpp: ../cycle_3_code/material_design.qrc \
 		../cycle_3_code/resources/play_arrow-24px.svg \
 		../cycle_3_code/resources/edit-white-24dp.svg \
 		../cycle_3_code/resources/live_tv-white-24dp.svg \
+		../cycle_3_code/resources/skip_previous-24px.svg \
+		../cycle_3_code/resources/skip_next-24px.svg \
 		../cycle_3_code/resources/video_library-24px.svg \
 		../cycle_3_code/resources/add_circle_outline-white-24dp.svg \
 		../cycle_3_code/resources/pause_circle_filled-24px.svg \
@@ -1084,7 +1086,26 @@ release/mainwindow.o: ../cycle_3_code/mainwindow.cpp ../cycle_3_code/mainwindow.
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qstyle.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qtabbar.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qrubberband.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QLocale \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QIcon \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QHBoxLayout \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qboxlayout.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qlayout.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qgridlayout.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QLabel \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qlabel.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QMenuBar \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmenubar.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmenu.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qaction.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qactiongroup.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QSpacerItem \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QStatusBar \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qstatusbar.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QVBoxLayout \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\cycle_3_code\mainwindow.cpp
 
 release/playlist_display.o: ../cycle_3_code/playlist_display.cpp ../cycle_3_code/playlist_display.h \
@@ -2494,6 +2515,9 @@ release/tomeo.o: ../cycle_3_code/tomeo.cpp C:/Qt/5.15.1/mingw81_64/include/QtWid
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QVector \
 		../cycle_3_code/video_settings.h \
 		ui_toolbars.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QIcon \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QLabel \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QSlider \
 		../cycle_3_code/thumbnails_layout.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\tomeo.o ..\cycle_3_code\tomeo.cpp
 
@@ -2640,6 +2664,10 @@ release/video_settings.o: ../cycle_3_code/video_settings.cpp ../cycle_3_code/vid
 		C:/Qt/5.15.1/mingw81_64/include/QtMultimedia/qmediaplaylist.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtMultimedia/qmediabindableinterface.h \
 		ui_toolbars.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QIcon \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QLabel \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qlabel.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qframe.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QSlider \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qslider.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qabstractslider.h \

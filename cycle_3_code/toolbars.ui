@@ -544,6 +544,11 @@
  max-height:38px;
  min-width:38px;
  min-height:38px;
+}
+QPushButton:hover{
+	background-color:rgb(114, 26, 239);
+	color: white;
+	background-repeat: no-repeat;
 }</string>
    </property>
    <property name="text">
@@ -592,6 +597,11 @@
  max-height:38px;
  min-width:38px;
  min-height:38px;
+}
+QPushButton:hover{
+	background-color:rgb(114, 26, 239);
+	color: white;
+	background-repeat: no-repeat;
 }</string>
    </property>
    <property name="text">
@@ -692,6 +702,11 @@
  max-height:38px;
  min-width:38px;
  min-height:38px;
+}
+QPushButton:hover{
+	background-color:rgb(114, 26, 239);
+	color: white;
+	background-repeat: no-repeat;
 }</string>
    </property>
    <property name="text">
@@ -716,6 +731,12 @@
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>8</pointsize>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
@@ -748,6 +769,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Arial</family>
      <pointsize>11</pointsize>
     </font>
    </property>
@@ -762,6 +784,11 @@
  max-height:38px;
  min-width:38px;
  min-height:38px;
+}
+QPushButton:hover{
+	background-color:rgb(114, 26, 239);
+	color: white;
+	background-repeat: no-repeat;
 }</string>
    </property>
    <property name="text">
@@ -797,10 +824,19 @@
  max-height:38px;
  min-width:38px;
  min-height:38px;
+}
+QPushButton:hover{
+	background-color:rgb(114, 26, 239);
+	color: white;
+	background-repeat: no-repeat;
 }</string>
    </property>
    <property name="text">
-    <string>NEXT</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="material_design.qrc">
+     <normaloff>:/new/prefix1/resources/skip_next-24px.svg</normaloff>:/new/prefix1/resources/skip_next-24px.svg</iconset>
    </property>
   </widget>
   <widget class="QPushButton" name="prevButton">
@@ -829,10 +865,19 @@
  max-height:38px;
  min-width:38px;
  min-height:38px;
+}
+QPushButton:hover{
+	background-color:rgb(114, 26, 239);
+	color: white;
+	background-repeat: no-repeat;
 }</string>
    </property>
    <property name="text">
-    <string>PREV</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="material_design.qrc">
+     <normaloff>:/new/prefix1/resources/skip_previous-24px.svg</normaloff>:/new/prefix1/resources/skip_previous-24px.svg</iconset>
    </property>
   </widget>
  </widget>
