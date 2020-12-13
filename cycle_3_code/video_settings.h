@@ -33,11 +33,12 @@ private slots:
      void durationChanged(qint64 duration);
      void muteClicked();
      void playPauseClicked();
+     void setVolume(int volume);
      void setMuted(bool muted);
 
 private:
     Ui::Settings  *ui;
-    bool videoMuted = false;
+    bool videoMuted = true;
     bool playing = true;
     int vid_duration;
 };

@@ -618,6 +618,9 @@
     <string notr="true">QSlider::handle:horizontal {background-color: rgb(3, 218, 198);}
 </string>
    </property>
+   <property name="value">
+    <number>99</number>
+   </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
    </property>

@@ -73,6 +73,14 @@ int VideoSettings::volume() const
                                                 QAudio::LinearVolumeScale);
     return qRound(linearVolume * 100);
 }
+void VideoSettings::setVolume(int volume)
+{
+    qreal logarithmicVolume = QAudio::convertVolume(volume / qreal(100),
+                                                    QAudio::LinearVolumeScale,
+                                                    QAudio::LogarithmicVolumeScale);
+
+    ui->horizontalSlider->setValue(qRound(logarithmicVolume * 100));
+}
 void VideoSettings::onVolumeSliderValueChanged()
 {
     emit changeVolume(volume());
@@ -95,10 +103,10 @@ void VideoSettings::setMuted(bool muted){
     if (muted != videoMuted)
         videoMuted = muted;
 
-    if (videoMuted == true)
-        ui->mutebutton->setIcon(QIcon(":/new/prefix1/resources/volume_up-24px.svg"));
-    else
+    if (videoMuted != true)
         ui->mutebutton->setIcon(QIcon(":/new/prefix1/resources/volume_off-24px.svg"));
+    else
+        ui->mutebutton->setIcon(QIcon(":/new/prefix1/resources/volume_up-24px.svg"));
 }
 
 void VideoSettings::positionChanged(qint64 position)

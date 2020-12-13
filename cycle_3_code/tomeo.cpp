@@ -134,7 +134,7 @@ int main(int argc, char *argv[]) {
     buttonWidget->setLayout(thumbs);
 
 
-    // create buttons that dynamically update as the videos in the library increase
+    // create buttons that dynamically update as the videos in the library increases
     for ( int i = 0; i <(int)videos.size(); i++ ) {
         TheButton *button = new TheButton(buttonWidget);
         button->connect(button, SIGNAL(jumpTo(TheButtonInfo* )), player, SLOT (jumpTo(TheButtonInfo* ))); // when clicked, tell the player to play.
