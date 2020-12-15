@@ -125,7 +125,7 @@ int main(int argc, char *argv[]) {
     // a list of the buttons
     vector<TheButton*> buttons;
     // the buttons are arranged horizontally
-    QHBoxLayout *layout = new QHBoxLayout();
+    //QHBoxLayout *layout = new QHBoxLayout();
     //buttonWidget->setLayout(layout);
 
 

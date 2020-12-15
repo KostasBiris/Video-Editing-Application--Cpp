@@ -12,16 +12,12 @@ MainWindow::MainWindow(QWidget *parent)
 
 void MainWindow::addTomeo(QWidget &tomeo){
     ui->verticalLayout->addWidget(&tomeo);
-
     //connect(ui->addVideos)
-
-
 }
 
 void MainWindow::addPlaylistDisplay(QWidget *disp){
     ui->verticalLayout_2->addWidget(disp);
     ui->verticalLayout_2->addStretch();
-
 }
 
 void MainWindow::makePlayerConnections(ThePlayer* player){
@@ -34,4 +30,7 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+
+
 

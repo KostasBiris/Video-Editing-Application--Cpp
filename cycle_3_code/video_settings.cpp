@@ -12,7 +12,8 @@ VideoSettings::VideoSettings(QWidget *parent)
 }
 
 void VideoSettings::makePlayerConnections(ThePlayer* player){
-
+    //video set mute by default
+    player->setMuted(true);
     //hide overlapping button
     ui->pushButton->hide();
     //play pause

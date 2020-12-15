@@ -20,6 +20,8 @@ public:
     void addPlaylistDisplay(QWidget *disp);
     ~MainWindow();
 
+private slots:
+
 private:
     Ui::MainWindow *ui;
 };

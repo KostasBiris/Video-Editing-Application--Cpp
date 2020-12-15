@@ -1,4 +1,5 @@
 #include "playlist_display.h"
+#include "mainwindow.h"
 
 
 PlaylistDisplay::PlaylistDisplay()

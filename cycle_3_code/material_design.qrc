@@ -16,5 +16,7 @@
         <file>resources/skip_previous-24px.svg</file>
         <file>resources/volume_off-24px.svg</file>
         <file>resources/volume_up-24px.svg</file>
+        <file>resources/search-white-24dp.svg</file>
+        <file>resources/delete-white-24dp.svg</file>
     </qresource>
 </RCC>

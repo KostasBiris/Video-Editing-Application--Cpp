@@ -14,6 +14,7 @@ public:
 
     void addPlaylist(vector<TheButtonInfo> * list);
     void makePlayerConnections(ThePlayer* player);
+    void makeMainConnections();
 
 signals:
      void sendTitle(QString title);
