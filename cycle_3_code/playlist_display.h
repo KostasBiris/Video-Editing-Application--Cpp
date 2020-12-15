@@ -4,6 +4,8 @@
 #include <QListWidget>
 #include <QMediaPlaylist>
 #include "the_player.h"
+#include <QMessageBox>
+#include <QInputDialog>
 
 class PlaylistDisplay: public QListWidget
 {
@@ -15,6 +17,12 @@ public:
     void addPlaylist(vector<TheButtonInfo> * list);
     void makePlayerConnections(ThePlayer* player);
     void makeMainConnections();
+
+ public
+    slots:
+    void addEntry();
+    void delEntry();
+    void searchEntry();
 
 signals:
      void sendTitle(QString title);

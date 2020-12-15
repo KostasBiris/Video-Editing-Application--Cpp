@@ -16,7 +16,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     void addTomeo(QWidget& tomeo);
-    void makePlayerConnections(ThePlayer* player);
+    void makePlaylistConnections(PlaylistDisplay* list);
     void addPlaylistDisplay(QWidget *disp);
     ~MainWindow();
 

@@ -70,3 +70,6 @@ void ThePlayer::selectMedia(QString title){
     }
 }
 
+void ThePlayer::addMedia(){
+
+}

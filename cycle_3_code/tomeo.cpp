@@ -177,7 +177,7 @@ int main(int argc, char *argv[]) {
 
 
     MainWindow w;
-    //w.makePlayerConnections(player);
+
     w.addTomeo(window);
 
     //make a playlist displayer
@@ -187,6 +187,7 @@ int main(int argc, char *argv[]) {
     list->addPlaylist(&videos);
     list->makePlayerConnections(player);
     w.addPlaylistDisplay(list);
+    w.makePlaylistConnections(list);
 
     w.show();
 

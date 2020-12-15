@@ -57,6 +57,7 @@ public slots:
     void nextMedia();
     void prevMedia();
     void selectMedia(QString title);
+    void addMedia();
 
 };
 

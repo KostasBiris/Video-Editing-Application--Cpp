@@ -33,4 +33,46 @@ void PlaylistDisplay::itemClicked(QListWidgetItem* item){
     emit(sendTitle(item->text()));
 }
 
+void PlaylistDisplay::addEntry(){
+    this->insertItem(0,this->itemAt(0,0)->text());
+     QMessageBox::information(
+                NULL,
+                QString("Tomeo"),
+                QString("video added to playlist"),
+                QMessageBox::Ok);
+}
+void PlaylistDisplay::delEntry(){
+    this->takeItem(0);
+     QMessageBox::information(
+                NULL,
+                QString("Tomeo"),
+                QString("video removed from Playlist"),
+                QMessageBox::Ok);
+}
+
+void PlaylistDisplay::searchEntry(){
+    bool ok;
+    QString text = QInputDialog::getText(this, tr("Tomeo::Search"),
+                                             tr("File name:"), QLineEdit::Normal,
+                                             NULL, &ok);
+    ok = false;
+    for(int i = 0 ; i < this->count() ; i++){
+        if(text.compare(this->item(i)->text()) == 0 ){
+            ok = true;
+            int q = QMessageBox::question(
+                       NULL,
+                       QString("Tomeo"),
+                       QString("File found in playlist.\nPlay now?"),
+                       QMessageBox::Yes | QMessageBox::No);
+           if(q == QMessageBox::Yes) emit(sendTitle(text));
+        }
+    }
+    if(ok == false){QMessageBox::warning(
+                    NULL,
+                    QString("Tomeo"),
+                    QString("File not found in playlist."),
+                    QMessageBox::Ok);
+    }
+
+}
 

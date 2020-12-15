@@ -12,7 +12,6 @@ MainWindow::MainWindow(QWidget *parent)
 
 void MainWindow::addTomeo(QWidget &tomeo){
     ui->verticalLayout->addWidget(&tomeo);
-    //connect(ui->addVideos)
 }
 
 void MainWindow::addPlaylistDisplay(QWidget *disp){
@@ -20,9 +19,13 @@ void MainWindow::addPlaylistDisplay(QWidget *disp){
     ui->verticalLayout_2->addStretch();
 }
 
-void MainWindow::makePlayerConnections(ThePlayer* player){
-    //change folder
-   // connect(ui->addVideos, &QAbstractButton::clicked, player, &ThePlayer::nextMedia);
+void MainWindow::makePlaylistConnections(PlaylistDisplay* list){
+    //add video
+   connect(ui->addButton, &QAbstractButton::clicked, list, &PlaylistDisplay::addEntry);
+   //remove video
+   connect(ui->delButton, &QAbstractButton::clicked, list, &PlaylistDisplay::delEntry);
+   //seach video
+   connect(ui->searchButton, &QAbstractButton::clicked, list, &PlaylistDisplay::searchEntry);
 
 }
 
