@@ -8,7 +8,7 @@ PlaylistDisplay::PlaylistDisplay()
     this->setStyleSheet(  "background-color:rgb(18, 18, 18);;"
                              "border-style: solid;"
                              "border-width:1px;"
-                            "border-color: white;"
+                              "border-color: rgb(82, 87, 90);"
                           "color: white"
                             );
 }

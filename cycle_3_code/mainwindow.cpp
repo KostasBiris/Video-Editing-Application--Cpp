@@ -15,8 +15,24 @@ void MainWindow::addTomeo(QWidget &tomeo){
 }
 
 void MainWindow::addPlaylistDisplay(QWidget *disp){
+
     ui->verticalLayout_2->addWidget(disp);
     ui->verticalLayout_2->addStretch();
+
+}
+
+void MainWindow::makePlayerConnections(ThePlayer *player){
+    //first time writing the stuff
+    QString theText = "Currently playing:\n" + player->currentMedia().request().url().fileName() +"\n" + "Select video from playlist:";
+    ui->label->setText(theText);
+    //update current label
+    connect(player,&QMediaPlayer::mediaChanged,this,&MainWindow::currentChanged );
+}
+
+void MainWindow::currentChanged(const QMediaContent &media){
+
+    QString theText = "Currently playing:\n" + media.request().url().fileName() +"\n" + "Select video from playlist:";
+    ui->label->setText(theText);
 }
 
 void MainWindow::makePlaylistConnections(PlaylistDisplay* list){
