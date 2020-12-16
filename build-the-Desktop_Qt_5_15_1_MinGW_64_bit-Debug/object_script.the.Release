@@ -1,0 +1,14 @@
+release/mainwindow.o
+release/playlist_display.o
+release/the_button.o
+release/the_player.o
+release/thumbnails_layout.o
+release/tomeo.o
+release/video_settings.o
+release/vidlayout.o
+release/qrc_material_design.o
+release/moc_mainwindow.o
+release/moc_playlist_display.o
+release/moc_the_button.o
+release/moc_the_player.o
+release/moc_video_settings.o
