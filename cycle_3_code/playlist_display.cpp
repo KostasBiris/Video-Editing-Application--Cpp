@@ -57,7 +57,7 @@ void PlaylistDisplay::searchEntry(){
                                              NULL, &ok);
     ok = false;
     for(int i = 0 ; i < this->count() ; i++){
-        if(text.compare(this->item(i)->text()) == 0 ){
+        if(text.compare(this->item(i)->text()) == 0){
             ok = true;
             int q = QMessageBox::question(
                        NULL,
