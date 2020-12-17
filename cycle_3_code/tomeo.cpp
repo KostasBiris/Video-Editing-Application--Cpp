@@ -128,20 +128,18 @@ int main(int argc, char *argv[]) {
     //QHBoxLayout *layout = new QHBoxLayout();
     //buttonWidget->setLayout(layout);
 
-
     ///layout for the 4 buttons
     ThumbLayout *thumbs = new ThumbLayout(5);
     buttonWidget->setLayout(thumbs);
 
-
-    // create buttons that dynamically update as the videos in the library increases
+    // create buttons for each video in the folder
     for ( int i = 0; i <(int)videos.size(); i++ ) {
         TheButton *button = new TheButton(buttonWidget);
         button->connect(button, SIGNAL(jumpTo(TheButtonInfo* )), player, SLOT (jumpTo(TheButtonInfo* ))); // when clicked, tell the player to play.
         buttons.push_back(button);
         //layout->addWidget(button);
         thumbs->addWidget(button);
-        button->init(&videos.at(i)); ///original i = 4, there are only 4 indexed videos, fix later //Upadate: fixed
+        button->init(&videos.at(i));
     }
 
     // tell the player what buttons and videos are available
@@ -163,25 +161,22 @@ int main(int argc, char *argv[]) {
     QWidget* settings = qsettings;
 
     vids->addWidget(settings);
-    // showtime!
 
-
-
+    //create mainwindow
     MainWindow w;
+    //connect buttons
     w.makePlayerConnections(player);
     w.addTomeo(window);
 
     //make a playlist displayer
     PlaylistDisplay *list = new PlaylistDisplay();
-    /*QListView *disp = new QListView();
-    disp->setModel(aux);*/
     list->addPlaylist(&videos);
+    //connect buttons
     list->makePlayerConnections(player);
     w.addPlaylistDisplay(list);
     w.makePlaylistConnections(list);
 
     w.show();
-
     // wait for the app to terminate
     return app.exec();
 

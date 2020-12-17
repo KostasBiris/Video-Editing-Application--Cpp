@@ -109,14 +109,11 @@ int main(int argc, char *argv[]) {
         }
         exit(-1);
     }
-
     // the widget that will show the video
     QVideoWidget *videoWidget = new QVideoWidget;
-
     // the QMediaPlayer which controls the playback
     ThePlayer *player = new ThePlayer;
     player->setVideoOutput(videoWidget);
-
     // a row of buttons
     QWidget *buttonWidget = new QWidget();
     // a list of the buttons
@@ -124,21 +121,16 @@ int main(int argc, char *argv[]) {
     // the buttons are arranged horizontally
     QHBoxLayout *layout = new QHBoxLayout();
     //buttonWidget->setLayout(layout);
-
-
     ///layout for the 4 buttons
     ThumbLayout *thumbs = new ThumbLayout(5);
     buttonWidget->setLayout(thumbs);
-
-
     // create buttons that dynamically update as the videos in the library increase
     for ( int i = 0; i < (int)videos.size(); i++ ) {
         TheButton *button = new TheButton(buttonWidget);
         button->connect(button, SIGNAL(jumpTo(TheButtonInfo* )), player, SLOT (jumpTo(TheButtonInfo* ))); // when clicked, tell the player to play.
         buttons.push_back(button);
-        //layout->addWidget(button);
         thumbs->addWidget(button);
-        button->init(&videos.at(i)); ///original i = 4, there are only 4 indexed videos, fix later //Upadate: fixed
+        button->init(&videos.at(i));
     }
 
     // tell the player what buttons and videos are available
@@ -155,15 +147,6 @@ int main(int argc, char *argv[]) {
     vids->addWidget(videoWidget);
     vids->addWidget(buttonWidget);
 
-    //add the video settings at the bottom
-    /*Ui::Settings q;
-    QWidget* settings = new QWidget();
-    q.setupUi(settings);*/
-
-    //I made a class for the settings.ui but it gives weird errors so that's it for now
-    //VideoSettings q;
-
-    //idk if this fixes it, there might be some bugs along the way
     QWidget* settings = new VideoSettings();
     vids->addWidget(settings);
     // showtime!

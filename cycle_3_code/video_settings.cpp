@@ -89,7 +89,6 @@ void VideoSettings::onVolumeSliderValueChanged()
 
 void VideoSettings::onPositionSliderValueChanged(int position)
 {
-    qDebug()<<position;
     emit setPosition(position);
 }
 

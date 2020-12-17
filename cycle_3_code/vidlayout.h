@@ -5,7 +5,7 @@
 #include <QtWidgets>
 #include <QVector>
 
-
+//left hand side layout
 class VidLayout : public QLayout
 {
 public:

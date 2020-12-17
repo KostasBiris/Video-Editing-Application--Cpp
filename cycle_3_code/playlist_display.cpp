@@ -18,7 +18,7 @@ PlaylistDisplay::~PlaylistDisplay()
 }
 
 void PlaylistDisplay::makePlayerConnections(ThePlayer *player){
-
+    //handle label clicked
     connect(this, &QListWidget::itemClicked,this, &PlaylistDisplay::itemClicked);
     connect(this, &PlaylistDisplay::sendTitle, player, &ThePlayer::selectMedia);
 }

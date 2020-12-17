@@ -63,7 +63,8 @@ void ThePlayer::prevMedia(){
 void ThePlayer::selectMedia(QString title){
     //seach for the file in the playlist
     for( int i = 0 ; i < playlist->mediaCount(); i++){
-        if ( title.compare(playlist->media(i).request().url().fileName()) == 0){
+        if ( title.compare(
+                 playlist->media(i).request().url().fileName()) == 0){
             playlist->setCurrentIndex(i);
             setMedia(playlist->currentMedia());
         }

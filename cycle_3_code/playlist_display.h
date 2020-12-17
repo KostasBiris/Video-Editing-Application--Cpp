@@ -7,6 +7,7 @@
 #include <QMessageBox>
 #include <QInputDialog>
 
+//class for playlist
 class PlaylistDisplay: public QListWidget
 {
     Q_OBJECT

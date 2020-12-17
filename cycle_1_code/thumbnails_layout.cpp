@@ -45,7 +45,6 @@ void ThumbLayout::setGeometry(const QRect &r)
     if( size <= m_items.size() ){
         for( i = 0 ; i< size ; i++ ){
            QLayoutItem *o = m_items.at(i);
-           //fixed the behaviour of the buttons is slightly stacked at the left side
            int xspacing = (r.width()-198*size)/(size-1);
            QRect geom((xspacing+198)*i, r.y()+4, 196, r.height()-8);
            o->setGeometry(geom);
@@ -71,13 +70,12 @@ void ThumbLayout::setGeometry(const QRect &r)
 }
 
 
-//IDK WHAT THIS DOES BUT IT WORKS AS INTENDED
 QSize ThumbLayout::sizeHint() const
 {
     QSize s(0, 0);
     int n = m_items.count();
     if (n > 0)
-        s = QSize(100, 70); //start with a nice default size
+        s = QSize(100, 70);
     int i = 0;
     while (i < n) {
         QLayoutItem *o = m_items.at(i);

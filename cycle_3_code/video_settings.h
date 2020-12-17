@@ -9,6 +9,7 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class Settings; }
 QT_END_NAMESPACE
 
+//class for video settings .ui
 class VideoSettings : public QWidget
 {
     Q_OBJECT

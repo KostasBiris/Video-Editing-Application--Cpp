@@ -5,6 +5,7 @@
 #include <QtWidgets>
 #include <QVector>
 
+//new layout for video thumbnails
 class ThumbLayout : public QLayout
 {
 public:

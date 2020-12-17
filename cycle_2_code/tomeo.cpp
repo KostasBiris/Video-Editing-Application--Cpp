@@ -157,15 +157,6 @@ int main(int argc, char *argv[]) {
     vids->addWidget(videoWidget);
     vids->addWidget(buttonWidget);
 
-    //add the video settings at the bottom
-    /*Ui::Settings q;
-    QWidget* settings = new QWidget();
-    q.setupUi(settings);*/
-
-    //I made a class for the settings.ui but it gives weird errors so that's it for now
-    //VideoSettings q;
-
-    //idk if this fixes it, there might be some bugs along the way
     VideoSettings* qsettings = new VideoSettings();
     qsettings->makePlayerConnections(player);
     QWidget* settings = qsettings;
